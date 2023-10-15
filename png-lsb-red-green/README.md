@@ -23,4 +23,4 @@ Make sure the image with the embedded flag is located in the same directory as t
 
 ## Example Problem
 Hint: I can't decide which of these colors are the least significant, red xor green 🤔
-![Suspicious rubix cube & dry erase markers](/encoded.png)
+![Suspicious rubix cube & dry erase markers](encoded.png)
