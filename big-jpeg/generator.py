@@ -2,10 +2,10 @@ import png
 import os
 
 pwd = input("Enter the passphrase to encrypt with: ")
-pwd = "'[password: " + pwd + "]'"
+paddedPwd = "'[password: " + pwd + "]'"
 
 # embed the flag in flag.txt encrypted with provided passphrase
-os.system("steghide embed -cf original-images/flag.jpg -sf encoded-images/flag.jpg -ef flag.txt -p " + pwd)
+os.system("steghide embed -cf original-images/flag.jpg -sf encoded-images/flag.jpg -ef flag.txt -p " + paddedPwd)
 
 # store the passphrase in the least significant bits of key.png
 keyFile = open("original-images/key.png", "rb")
