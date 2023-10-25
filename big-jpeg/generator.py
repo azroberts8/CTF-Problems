@@ -5,7 +5,7 @@ pwd = input("Enter the passphrase to encrypt with: ")
 paddedPwd = "'[password: " + pwd + "]'"
 
 # embed the flag in flag.txt encrypted with provided passphrase
-os.system("steghide embed -cf original-images/flag.jpg -sf encoded-images/flag.jpg -ef flag.txt -p " + paddedPwd)
+os.system("steghide embed -cf original-images/flag.jpg -sf encoded-images/flag.jpg -ef flag.txt -p " + pwd)
 
 # store the passphrase in the least significant bits of key.png
 keyFile = open("original-images/key.png", "rb")
@@ -25,10 +25,10 @@ for row in keyContents[2]:
     y += 1
 
 ## encode the bits of the passphrase into the LSB of each color channel of each pixel
-for i in range(len(pwd) * 8):
+for i in range(len(paddedPwd) * 8):
     xLoc = i % (keyWidth * 3)
     yLoc = i // (keyWidth * 3)
-    pwdBit = (bytes(pwd, 'utf-8')[i // 8] >> (7 - (i % 8))) & 0x01
+    pwdBit = (bytes(paddedPwd, 'utf-8')[i // 8] >> (7 - (i % 8))) & 0x01
     keyPixels[yLoc][xLoc] = (keyPixels[yLoc][xLoc] & 0xFE) + pwdBit
 
 ## write the pixels to the output key.png
