@@ -38,3 +38,5 @@ FLUSH PRIVILEGES;
 
 /* Populate the database with contents */
 INSERT INTO Users (Username, Password) VALUES ('admin', 'mypassword');
+INSERT INTO Topics (Title) VALUES ('Cutting Edge Generative AI');
+INSERT INTO Topics (TItle) VALUES ('Embedded Software Engineering');
