@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS Posts(
     PostID smallint(6) unsigned NOT NULL AUTO_INCREMENT,
     TopicID smallint(6) unsigned NOT NULL,
     UserID smallint(6) unsigned NOT NULL,
-    Created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    Posted TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     Title varchar(120) NOT NULL,
     Contents varchar(16000) NOT NULL,
     PRIMARY KEY (PostID),
