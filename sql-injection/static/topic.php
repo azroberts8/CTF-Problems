@@ -23,10 +23,10 @@
             if($result->num_rows == 1) {
                 $userID = $result->fetch_assoc()["UserID"];
                 $topicID = preg_replace('/[^0-9]/', '', $_GET["topic"]);
-                $title = substr(htmlspecialchars($_POST['title']), 0, 120);
-                $body = substr(htmlspecialchars($_POST['body']), 0, 1600);
+                $title = substr($_POST['title'], 0, 120);
+                $body = substr($_POST['body'], 0, 1600);
                 $sql = "INSERT INTO Posts (TopicID, UserID, Title, Contents) VALUES ('" . $topicID . "', '" . $userID . "', '" . $title . "', '" . $body . "');";
-                $conn->query($sql);
+                $conn->query($sql) or die($conn->error);
             } else {
                 $error = "Could not identify user " . $_SESSION["username"];
             }
