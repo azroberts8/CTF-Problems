@@ -49,7 +49,7 @@
     <br>
     <?php 
         if(isset($_SESSION["username"])) {
-            echo "<form action='newtopic.php'>
+            echo "<form action='newtopic.php' method='post'>
                 <h3>Create Topic</h3>
                 <label for='topicName'>Topic Name:</label><br>
                 <input type='text' id='topicName' name='topicName'><br>
