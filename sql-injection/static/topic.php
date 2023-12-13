@@ -55,6 +55,7 @@
             echo "<a href='signin.php'>Sign In</a>";
         }
     ?>
+    <a href="index.php">Return Home</a>
     <h2><?php echo $title ?></h2>
     <?php
         $sql = "SELECT Users.Username AS username, Posts.Title AS title, Posts.Contents AS body, Posts.Posted AS posted FROM Posts RIGHT JOIN Users ON Posts.UserID = Users.UserID WHERE Posts.TopicID = " . preg_replace('/[^0-9]/', '', $_GET["topic"]) . " ORDER BY Posts.Posted;";

@@ -73,6 +73,7 @@
     <title>Tech Topics - Sign-In</title>
 </head>
 <body>
+    <a href="index.php">Return Home</a>
     <form action="signin.php" method="post">
         <h3>Sign in to Tech Topics</h3>
         <label for='username'>Username:</label><br>
