@@ -4,5 +4,6 @@ This repository contains a mix of CTF problems and scripts that I have written t
 | Problem | Category | Description |
 |  :---:  |  :----:  | :---        |
 | Big JPEG | Forensics / Steganography | Uses a combination of common steganographic processes to embed the flag within an image |
+| HTTP Multiple Hosts | Web | A misconfigured reverse proxy that features a publically exposes a service that otherwise should have been private. |
 | PNG LSB Red Green | Forensics / Steganography | Uses least significant bit with XOR to embed the flag into the pixel data of a PNG image |
 | SQL Injection | Web / SQL Injection | A basic LAMP stack web application with SQL injection vulnerabilites accessible through some of the text input fields |
